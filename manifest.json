@@ -1,0 +1,24 @@
+{  
+    "manifest_version": 2,  
+    "name": "Test Contact Center Alert Plugin",  
+    "description": "This extension is designed to test page event alerts for LCC",  
+    "version": "1.0", 
+
+    "browser_action": {  
+        "default_icon": "images/ccicon.png",  
+        "default_popup": "popup.html"  
+    },
+    
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+
+    "content_scripts": [{
+        "matches": ["https://www.example.com/*"],
+        "js": ["jquery.js", "content.js"]
+    }],
+
+    "permissions": ["activeTab"]  
+
+}  
