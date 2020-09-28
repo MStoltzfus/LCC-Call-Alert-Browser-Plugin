@@ -1,8 +1,8 @@
 {  
     "manifest_version": 2,  
-    "name": "Test Contact Center Alert Plugin",  
+    "name": "Landis Contact Center Ringer Plugin - Test",  
     "description": "This extension is designed to test page event alerts for LCC",  
-    "version": "1.0", 
+    "version": "0.0.1", 
 
     "browser_action": {  
         "default_icon": "images/ccicon.png",  
@@ -14,11 +14,27 @@
         "persistent": false
     },
 
-    "content_scripts": [{
-        "matches": ["https://www.example.com/*"],
-        "js": ["jquery.js", "content.js"]
-    }],
+    "content_scripts": [
+        {
+            "matches": [
+            "*://*.landis.cloud/client/agentpanel/*", 
+             "*://lcc-staging-eastus.azurewebsites.net/client/agentpanel/*",
+            "*://lcc-dev-eastus.azurewebsites.net/client/agentpanel/*"],
+            "js": "content.js"
+        }
+    ],
 
-    "permissions": ["activeTab"]  
+    "web_accessible_resources": [
+        "audio/ring.mp3",
+        "Images/"
+    ],
+
+    "permissions": [
+        "storage", 
+        "tabs", 
+        "*://*.landis.cloud/client/agentpanel/*", 
+        "*://lcc-staging-eastus.azurewebsites.net/client/agentpanel/*",
+        "*://lcc-dev-eastus.azurewebsites.net/client/agentpanel/*"
+    ]  
 
 }  
