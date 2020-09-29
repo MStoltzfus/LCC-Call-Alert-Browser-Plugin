@@ -1,9 +1,7 @@
 //chrome.runtime.sendmessage()
 
-var alert = document.getElementsByClassName('toast-alert');
+var callAlert = document.getElementsByClassName('toast-alert');
 
-if(typeof(alert) != 'undefined' && alert !=null{
-    alert('Toast is toasting!');
-} else {
-    alert('Toast is not toasting!');
+if(typeof(callAlert) != 'undefined' && alert !=null){
+    chrome.tabs.sendMessage(tab.id, msg);
 }

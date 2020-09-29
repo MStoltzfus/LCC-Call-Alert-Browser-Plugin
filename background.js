@@ -1,11 +1,8 @@
-chrome.runtime.onMessage.addlistener(
-    function (
-        request, 
-        sender, 
-        sendResponse
-        )
-        {}
-    )
+chrome.runtime.onMessage.addlistener(gotMessage)
+
+function gotMessage(request, sender, sendResponse){
+    if 
+}
 
 
 var ringer = new Audio('https://bigsoundbank.com/UPLOAD/mp3/0743.mp3');
