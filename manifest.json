@@ -17,10 +17,10 @@
     "content_scripts": [
         {
             "matches": [
-            "*://*.landis.cloud/client/agentpanel/*", 
-             "*://lcc-staging-eastus.azurewebsites.net/client/agentpanel/*",
-            "*://lcc-dev-eastus.azurewebsites.net/client/agentpanel/*"],
-            "js": "content.js"
+                "*://*.landis.cloud/client/agentpanel/", 
+                "*://lcc-staging-eastus.azurewebsites.net/client/agentpanel/",
+                "*://lcc-dev-eastus.azurewebsites.net/client/agentpanel/"],
+            "js": ["content.js"]
         }
     ],
 
@@ -32,9 +32,9 @@
     "permissions": [
         "storage", 
         "tabs", 
-        "*://*.landis.cloud/client/agentpanel/*", 
-        "*://lcc-staging-eastus.azurewebsites.net/client/agentpanel/*",
-        "*://lcc-dev-eastus.azurewebsites.net/client/agentpanel/*"
+        "*://*.landis.cloud/client/agentpanel/", 
+        "*://lcc-staging-eastus.azurewebsites.net/client/agentpanel/",
+        "*://lcc-dev-eastus.azurewebsites.net/client/agentpanel/"
     ]  
 
 }  
